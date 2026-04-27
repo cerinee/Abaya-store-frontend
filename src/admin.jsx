@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const BASE = "http://localhost:4000/api";
+const BASE = "https://lyrine-store.onrender.com/api";
 const GOLD = "#C7A252";
 const DARK = "#0A0A0A";
 const BG   = "#FCF8F0";
@@ -322,7 +322,7 @@ function DashboardTab({ token }) {
                         {lowStock.map(p => (
                             <div key={p._id} style={{ display: "flex", alignItems: "center", gap: "0.75rem", padding: "0.6rem 0", borderBottom: "1px solid #F5F0EA" }}>
                                 <img
-                                    src={p.image ? `http://localhost:4000/uploads/${p.image}` : "/placeholder-abaya.jpg"}
+                                    src={p.image ? `https://lyrine-store.onrender.com/uploads/${p.image}` : "/placeholder-abaya.jpg"}
                                     alt={p.name}
                                     style={{ width: 40, height: 50, objectFit: "cover", borderRadius: 6 }}
                                 />
@@ -889,7 +889,7 @@ function ProductsTab({ token }) {
                         />
                         {editItem?.image && !imageFile && (
                             <img 
-                                src={`http://localhost:4000/uploads/${editItem.image}`} 
+                                src={`https://lyrine-store.onrender.com/uploads/${editItem.image}`} 
                                 alt="" 
                                 style={{ width: 60, height: 75, objectFit: "cover", borderRadius: 8, marginTop: "0.5rem" }} 
                             />
@@ -916,7 +916,7 @@ function ProductsTab({ token }) {
                         <TR key={product._id}>
                             <TD>
                                 <img
-                                    src={product.image ? `http://localhost:4000/uploads/${product.image}` : "/placeholder-abaya.jpg"}
+                                    src={product.image ? `https://lyrine-store.onrender.com/uploads/${product.image}` : "/placeholder-abaya.jpg"}
                                     alt={product.name}
                                     style={{ width: 45, height: 55, objectFit: "cover", borderRadius: 8 }}
                                     onError={(e) => { e.target.src = "/placeholder-abaya.jpg"; }}
@@ -1045,7 +1045,7 @@ function CategoriesTab({ token }) {
                         <Field label="Category Image">
                             <input type="file" accept="image/*" onChange={e => setImageFile(e.target.files[0])} style={{ marginTop: "0.3rem" }} />
                             {editItem?.image && !imageFile && (
-                                <img src={`http://localhost:4000/uploads/${editItem.image}`} alt="" style={{ width: 60, height: 60, objectFit: "cover", borderRadius: 8, marginTop: "0.5rem" }} />
+                                <img src={`https://lyrine-store.onrender.com/uploads/${editItem.image}`} alt="" style={{ width: 60, height: 60, objectFit: "cover", borderRadius: 8, marginTop: "0.5rem" }} />
                             )}
                         </Field>
                     </div>
@@ -1062,7 +1062,7 @@ function CategoriesTab({ token }) {
                 {categories.map(cat => (
                     <Card key={cat._id} style={{ display: "flex", alignItems: "center", gap: "1rem", padding: "1rem 1.25rem" }}>
                         {cat.image
-                            ? <img src={`http://localhost:4000/uploads/${cat.image}`} alt={cat.name} style={{ width: 55, height: 55, objectFit: "cover", borderRadius: 10 }} />
+                            ? <img src={`https://lyrine-store.onrender.com/uploads/${cat.image}`} alt={cat.name} style={{ width: 55, height: 55, objectFit: "cover", borderRadius: 10 }} />
                             : <div style={{ width: 55, height: 55, background: "#F5F2EC", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.5rem" }}>🗂</div>
                         }
                         <div style={{ flex: 1 }}>

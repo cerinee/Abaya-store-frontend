@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./cart.css";
 
-const BASE = "http://localhost:4000/api"; 
+const BASE = "https://lyrine-store.onrender.com/api"; 
 
 function Cart() {
     const [cartItems, setCartItems] = useState([]);
@@ -146,7 +146,7 @@ function Cart() {
                                     <div className="cart-item" key={pid}>
                                         <div className="item-image">
                                             <img
-                                                src={image ? `http://localhost:4000/uploads/${image}` : "/placeholder-abaya.jpg"}
+                                                src={image ? `https://lyrine-store.onrender.com/uploads/${image}` : "/placeholder-abaya.jpg"}
                                                 alt={name}
                                             />
                                         </div>

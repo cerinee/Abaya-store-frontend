@@ -21,8 +21,8 @@ function Abayas() {
     useEffect(() => {
         // fetch products and categories at the same time
         Promise.all([
-            fetch("http://localhost:4000/api/products").then(r => r.json()),
-            fetch("http://localhost:4000/api/category").then(r => r.json()),
+            fetch("https://lyrine-store.onrender.com/api/products").then(r => r.json()),
+            fetch("https://lyrine-store.onrender.com/api/category").then(r => r.json()),
         ])
         .then(([productsData, categoriesData]) => {
             setProducts(productsData);
@@ -118,7 +118,7 @@ function Abayas() {
                                     <img
                                         src={
                                             product.image
-                                                ? `http://localhost:4000/uploads/${product.image}`
+                                                ? `https://lyrine-store.onrender.com/uploads/${product.image}`
                                                 : "/placeholder-abaya.jpg"
                                         }
                                         alt={product.name}

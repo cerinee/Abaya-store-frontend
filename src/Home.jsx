@@ -30,13 +30,13 @@ function Home() {
             
             try {
                 // Fetch products
-                const productsRes = await fetch("http://localhost:4000/api/products");
+                const productsRes = await fetch("https://lyrine-store.onrender.com/api/products");
                 if (!productsRes.ok) throw new Error("Failed to fetch products");
                 const productsData = await productsRes.json();
                 setProducts(productsData);
                 
                 // Fetch categories
-                const categoriesRes = await fetch("http://localhost:4000/api/category");
+                const categoriesRes = await fetch("https://lyrine-store.onrender.com/api/category");
                 if (!categoriesRes.ok) throw new Error("Failed to fetch categories");
                 const categoriesData = await categoriesRes.json();
                 
@@ -129,7 +129,7 @@ function Home() {
                             >
                                 {cat.image && (
                                     <img 
-                                        src={`http://localhost:4000/uploads/${cat.image}`} 
+                                        src={`https://lyrine-store.onrender.com/uploads/${cat.image}`} 
                                         alt={cat.name}
                                         className="category-image"
                                     />
@@ -169,9 +169,9 @@ function Home() {
                                     <img
                                         src={
                                             product.image 
-                                                ? `http://localhost:4000/uploads/${product.image}`
+                                                ? `https://lyrine-store.onrender.com/uploads/${product.image}`
                                                 : product.images?.[0]
-                                                    ? `http://localhost:4000/${product.images[0]}`
+                                                    ? `https://lyrine-store.onrender.com/${product.images[0]}`
                                                     : "/placeholder-abaya.jpg"
                                         }
                                         alt={product.name}

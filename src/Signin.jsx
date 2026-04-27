@@ -16,7 +16,7 @@ function SignIn() {
         if (!form.email || !form.password) { setError("Please fill all fields"); return; }
         setLoading(true);
         try {
-            const res = await fetch("http://localhost:4000/api/signin", { // ← fixed port
+            const res = await fetch("https://lyrine-store.onrender.com/api/signin", { // ← fixed port
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(form),

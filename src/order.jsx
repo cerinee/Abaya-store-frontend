@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Home.css";
 
-const BASE = "http://localhost:4000/api";
+const BASE = "https://lyrine-store.onrender.com/api";
 
 const STATUS_COLORS = {
     pending:   { bg: "#FFF8E1", color: "#F59E0B" },
@@ -108,7 +108,7 @@ function Orders() {
                                         <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
                                             {(item.productId?.image || item.image) && (
                                                 <img
-                                                    src={`http://localhost:4000/uploads/${item.productId?.image || item.image}`}
+                                                    src={`https://lyrine-store.onrender.com/uploads/${item.productId?.image || item.image}`}
                                                     alt={item.productId?.name || item.name}
                                                     style={{ width: 45, height: 55, objectFit: "cover", borderRadius: 8 }}
                                                 />

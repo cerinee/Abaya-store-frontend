@@ -61,7 +61,7 @@ function ProductDetails() {
     const fetchProduct = async () => {
         setLoading(true);
         try {
-            const response = await fetch(`http://localhost:4000/api/products/${id}`);
+            const response = await fetch(`https://lyrine-store.onrender.com/api/products/${id}`);
             if (!response.ok) throw new Error("Product not found");
             const data = await response.json();
             setProduct(data);
@@ -103,7 +103,7 @@ function ProductDetails() {
         setCartMsg("");
 
         try {
-            const response = await fetch("http://localhost:4000/api/cart/add", {
+            const response = await fetch("https://lyrine-store.onrender.com/api/cart/add", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -210,7 +210,7 @@ function ProductDetails() {
                 orderDate: new Date()
             };
 
-            const response = await fetch("http://localhost:4000/api/orders/create", {
+            const response = await fetch("https://lyrine-store.onrender.com/api/orders/create", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -306,9 +306,9 @@ function ProductDetails() {
                     <img
                         src={
                             product.image 
-                                ? `http://localhost:4000/uploads/${product.image}`
+                                ? `https://lyrine-store.onrender.com/uploads/${product.image}`
                                 : product.images?.[0]
-                                    ? `http://localhost:4000/${product.images[0]}`
+                                    ? `https://lyrine-store.onrender.com/${product.images[0]}`
                                     : "/placeholder-abaya.jpg"
                         }
                         alt={product.name}
