@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./Cart.css";
+import "./cart.css";
 
-const BASE = "http://localhost:4000/api"; // ← was 4000
+const BASE = "http://localhost:4000/api"; 
 
 function Cart() {
     const [cartItems, setCartItems] = useState([]);
