@@ -1,0 +1,105 @@
+/* ===== PAGE WRAPPER ===== */
+.signup-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f5f2;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== CARD ===== */
+.signup-card {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ===== TITLE ===== */
+.signup-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0d0d0d;
+}
+
+/* ===== FORM ===== */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ===== INPUTS ===== */
+.signup-form input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+/* ===== FOCUS ===== */
+.signup-form input:focus {
+  border-color: #0d0d0d;
+}
+
+/* ===== BUTTON ===== */
+.signup-form button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #0d0d0d;
+  color: white;
+  cursor: pointer;
+}
+
+/* ===== DISABLED BUTTON ===== */
+.signup-form button:disabled {
+  background: #888;
+  cursor: not-allowed;
+}
+
+/* ===== ERROR ===== */
+.error-box {
+  background: #ffe5e5;
+  color: #c00;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* ===== FORGOT PASSWORD ===== */
+.forgot-password-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.forgot-password {
+  font-size: 13px;
+  color: #0d0d0d;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: -5px;
+  margin-bottom: 5px;
+}
+.signup-redirect {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.signup-link {
+    color: #C7A252;   /* luxury gold – matches your theme */
+    cursor: pointer;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.signup-link:hover {
+    color: #9E7B3B;
+    text-decoration: underline;
+}
